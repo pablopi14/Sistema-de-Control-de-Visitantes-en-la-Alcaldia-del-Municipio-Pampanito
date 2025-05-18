@@ -1,0 +1,82 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;        /* #F8F8F8 */
+    --foreground: 240 1% 19%;      /* #302F2F */
+    
+    --card: 0 0% 97%;              /* #F8F8F8 */
+    --card-foreground: 240 1% 19%; /* #302F2F */
+    
+    --popover: 0 0% 97%;           /* #F8F8F8 */
+    --popover-foreground: 240 1% 19%; /* #302F2F */
+    
+    --primary: 191 59% 45%;        /* #2F9EB5 */
+    --primary-foreground: 0 0% 100%;    /* White */
+    
+    --secondary: 190 74% 59%;      /* #48CAE4 */
+    --secondary-foreground: 240 1% 19%; /* #302F2F */
+    
+    --muted: 0 0% 90%;             /* #E5E4E4 */
+    --muted-foreground: 0 0% 44%; /* #717171 */
+    
+    --accent: 276 100% 75%;        /* #C77DFF */
+    --accent-foreground: 240 1% 19%; /* #302F2F */
+    
+    --destructive: 0 64% 50%;      /* #D32E2E */
+    --destructive-foreground: 0 0% 97%; /* #F8F8F8 */
+    
+    --border: 0 0% 90%;            /* #E5E4E4 */
+    --input: 0 0% 90%;             /* #E5E4E4 */
+    --ring: 191 59% 45%;           /* #2F9EB5 */
+    
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 97%;    /* #F8F8F8 */
+    --sidebar-foreground: 240 1% 19%;  /* #302F2F */
+    --sidebar-primary: 191 59% 45%;    /* #2F9EB5 */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 0 0% 90%;        /* #E5E4E4 */
+    --sidebar-accent-foreground: 240 1% 19%; /* #302F2F */
+    --sidebar-border: 0 0% 90%;        /* #E5E4E4 */
+    --sidebar-ring: 191 59% 45%;       /* #2F9EB5 */
+  }
+
+  /* Define our custom colors as CSS variables as well */
+  :root {
+    --text-1: 240 1% 19%;          /* #302F2F */
+    --text-2: 0 0% 44%;            /* #717171 */
+    --success-1: 122 39% 57%;      /* #66BB6A */
+    --error-1: 0 64% 50%;          /* #D32E2E */
+    --background-1: 0 0% 97%;      /* #F8F8F8 */
+    --background-2: 0 0% 90%;      /* #E5E4E4 */
+    --primary-2: 190 78% 75%;      /* #90E0EF */
+    --secondary-2: 190 79% 88%;    /* #CAF0F8 */
+    --tertiary-2: 276 100% 83%;    /* #E0AAFF */
+    --success-2: 122 34% 74%;      /* #A5D6A7 */
+    --error-2: 1 80% 62%;          /* #EE5351 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    @apply bg-background-1 text-text-1;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glass-card {
+  @apply bg-background-2/50 backdrop-blur-sm border border-background-2 shadow-lg;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-md hover:shadow-primary/30;
+}
